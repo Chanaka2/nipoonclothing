@@ -68,274 +68,534 @@
 
 <body class="font-sans bg-brand-50 text-brand-950 antialiased selection:bg-brand-950 selection:text-white">
 
-    <!-- Navigation -->
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-950 text-white text-xs py-2 px-4 text-center tracking-wide">
+        FREE SHIPPING ON ORDERS OVER RS. 5000 | USE CODE: NIPOON20
+    </div>
+
+    <!-- Main Navigation -->
     <nav id="navbar"
-        class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100 py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center gap-3">
-                        <img src="images/logo.jpg" alt="NIPOON Logo" class="h-10 w-auto">
-                        <span class="text-2xl font-extrabold tracking-tighter uppercase">NIPOON.</span>
-                    </a>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html"
-                        class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Home</a>
-                    <a href="shop.html"
-                        class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Shop</a>
-                    <a href="about.html"
-                        class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">About</a>
-                    <a href="contact.html"
-                        class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Contact</a>
-                </div>
-
-                <!-- Icons (Search, User, Cart) -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <button class="text-brand-950 hover:text-gray-500 transition"><i
-                            class="fa-solid fa-magnifying-glass text-lg"></i></button>
-                    <button class="text-brand-950 hover:text-gray-500 transition"><i
-                            class="fa-regular fa-user text-lg"></i></button>
-                    <button class="text-brand-950 hover:text-gray-500 transition relative">
-                        <i class="fa-solid fa-bag-shopping text-lg"></i>
-                        <span
-                            class="absolute -top-1.5 -right-2 bg-brand-950 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
-                    </button>
-                </div>
-
+        class="sticky top-0 w-full z-50 transition-all duration-300 bg-white border-b border-gray-100 shadow-sm">
+        <!-- Top Bar: Logo, Search, Icons -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center gap-4 lg:gap-8">
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-brand-950 hover:text-gray-600 focus:outline-none">
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-950 hover:text-brand-500 focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
+
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 lg:gap-3">
+                        <img src="images/logo.jpg" alt="NIPOON Logo" class="h-8 lg:h-10 w-auto">
+                        <span class="text-xl lg:text-2xl font-extrabold tracking-tighter uppercase hidden sm:block">NIPOON.</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar (Desktop) -->
+                <div class="hidden lg:flex flex-1 max-w-2xl relative">
+                    <input type="text" placeholder="Search for products, brands and more..." class="w-full bg-gray-100 border border-transparent focus:border-brand-950 focus:bg-white rounded-l-md py-2.5 px-4 outline-none transition-colors text-sm">
+                    <button class="bg-brand-950 hover:bg-brand-800 text-white px-6 rounded-r-md transition-colors">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- Icons (User, Cart) -->
+                <div class="flex items-center space-x-4 lg:space-x-6">
+                    <a href="#" class="hidden lg:flex flex-col items-center text-brand-950 hover:text-brand-500 transition group">
+                        <i class="fa-regular fa-user text-xl mb-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        <span class="text-[10px] font-medium uppercase">Login</span>
+                    </a>
+                    
+                    <button class="flex flex-col items-center text-brand-950 hover:text-brand-500 transition relative group" id="cart-drawer-btn">
+                        <div class="relative">
+                            <i class="fa-solid fa-bag-shopping text-xl group-hover:-translate-y-0.5 transition-transform"></i>
+                            <span class="absolute -top-1.5 -right-2 bg-red-600 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
+                        </div>
+                        <span class="text-[10px] font-medium uppercase mt-0.5 hidden lg:block">Cart</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search Bar (Visible only on mobile) -->
+            <div class="mt-4 lg:hidden relative flex">
+                <input type="text" placeholder="Search products..." class="w-full bg-gray-100 border border-transparent focus:border-brand-950 rounded-l-md py-2 px-4 outline-none text-sm">
+                <button class="bg-brand-950 text-white px-4 rounded-r-md">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Bar: Categories/Links (Desktop) -->
+        <div class="hidden lg:block border-t border-gray-100 bg-gray-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ul class="flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+                    <li><a href="index.html" class="block py-3 border-b-2 border-brand-950 text-brand-950">Home</a></li>
+                    <li class="group relative">
+                        <a href="shop.html" class="flex items-center gap-1 py-3 text-gray-600 hover:text-brand-950 transition-colors border-b-2 border-transparent hover:border-gray-300">
+                            Shop <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <!-- Mega Menu Dropdown -->
+                        <div class="absolute top-full left-0 w-64 bg-white border border-gray-100 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <ul class="py-2">
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">T-Shirts</a></li>
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">Hoodies</a></li>
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">Bottoms</a></li>
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="shop.html" class="block py-3 text-red-600 hover:text-red-700 transition-colors font-bold border-b-2 border-transparent hover:border-red-200">Sale %</a></li>
+                    <li><a href="about.html" class="block py-3 text-gray-600 hover:text-brand-950 transition-colors border-b-2 border-transparent hover:border-gray-300">About</a></li>
+                    <li><a href="contact.html" class="block py-3 text-gray-600 hover:text-brand-950 transition-colors border-b-2 border-transparent hover:border-gray-300">Contact</a></li>
+                </ul>
             </div>
         </div>
 
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
-            class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 md:hidden flex flex-col pt-20 px-6">
-            <button id="close-menu-btn" class="absolute top-6 right-6 text-brand-950 text-2xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="flex flex-col space-y-6 text-xl font-medium mt-8">
-                <a href="index.html" class="border-b border-gray-100 pb-4">Home</a>
-                <a href="shop.html" class="border-b border-gray-100 pb-4">Shop</a>
-                <a href="about.html" class="border-b border-gray-100 pb-4">About</a>
-                <a href="contact.html" class="border-b border-gray-100 pb-4">Contact</a>
+            class="fixed inset-0 z-50 bg-white transform -translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-4 px-0 shadow-2xl w-[85%] max-w-sm">
+            <div class="flex justify-between items-center px-6 pb-4 border-b border-gray-100">
+                <span class="font-extrabold text-xl tracking-tighter uppercase">Menu</span>
+                <button id="close-menu-btn" class="text-brand-950 text-2xl hover:text-red-500 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto">
+                <div class="flex flex-col text-lg font-medium mt-4">
+                    <a href="index.html" class="px-6 py-4 border-b border-gray-100 bg-gray-50 text-brand-950">Home</a>
+                    
+                    <!-- Mobile Categories Accordion -->
+                    <div class="border-b border-gray-100">
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-gray-700 hover:text-brand-950" id="mobile-shop-btn">
+                            Shop
+                            <i class="fa-solid fa-chevron-down text-sm transition-transform duration-200" id="mobile-shop-icon"></i>
+                        </button>
+                        <div class="hidden bg-gray-50 px-8 py-2 space-y-3 pb-4" id="mobile-shop-links">
+                            <a href="shop.html" class="block text-gray-600 text-base border-l-2 border-transparent hover:border-brand-950 pl-2">All Products</a>
+                            <a href="shop.html" class="block text-gray-600 text-base border-l-2 border-transparent hover:border-brand-950 pl-2">T-Shirts</a>
+                            <a href="shop.html" class="block text-gray-600 text-base border-l-2 border-transparent hover:border-brand-950 pl-2">Hoodies</a>
+                        </div>
+                    </div>
+                    
+                    <a href="shop.html" class="px-6 py-4 border-b border-gray-100 text-red-600 font-bold">Sale %</a>
+                    <a href="about.html" class="px-6 py-4 border-b border-gray-100 text-gray-700 hover:text-brand-950">About</a>
+                    <a href="contact.html" class="px-6 py-4 border-b border-gray-100 text-gray-700 hover:text-brand-950">Contact</a>
+                </div>
+            </div>
+            
+            <div class="p-6 border-t border-gray-100 bg-gray-50">
+                <a href="#" class="flex items-center gap-3 text-brand-950 font-medium">
+                    <i class="fa-regular fa-user text-xl"></i> Login / Register
+                </a>
             </div>
         </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
     </nav>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center overflow-hidden bg-brand-950">
-            <div class="absolute inset-0 z-0 bg-black">
-                <img src="images/hero.png" alt="NIPOON Clothing Hero" class="w-full h-full object-cover opacity-50">
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent"></div>
-            </div>
-
-            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto reveal mt-16">
-                <span class="block text-brand-200 uppercase tracking-[0.2em] font-medium mb-4 text-sm sm:text-base">The
-                    New Standard</span>
-                <h1
-                    class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 tracking-tighter uppercase leading-none drop-shadow-2xl">
-                    Define Your <br><span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400">Aesthetic</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
-                    Premium streetwear crafted for the modern individual. Experience uncompromising quality and timeless
-                    bold design.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="shop.html"
-                        class="px-8 py-4 bg-white text-brand-950 font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors duration-300">Shop
-                        Collection</a>
-                    <a href="about.html"
-                        class="px-8 py-4 bg-transparent border border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-brand-950 transition-colors duration-300 backdrop-blur-sm">Our
-                        Story</a>
+        <!-- Hero Image Slider (Carousel) -->
+        <section class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-brand-950 group">
+            <!-- Slides Container -->
+            <div id="hero-slider" class="relative w-full h-full flex transition-transform duration-500 ease-out">
+                <!-- Slide 1 -->
+                <div class="min-w-full h-full relative">
+                    <img src="images/hero.png" alt="Summer Collection" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                        <div class="text-white">
+                            <span class="block text-brand-200 uppercase tracking-widest text-sm mb-3">New Arrivals</span>
+                            <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold uppercase tracking-tighter mb-6 leading-none drop-shadow-2xl">Modern <br> Essentials</h2>
+                            <a href="shop.html" class="inline-block bg-white text-brand-950 px-8 py-3 font-bold uppercase tracking-wider hover:bg-gray-200 transition">Shop Now</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Slide 2 -->
+                <div class="min-w-full h-full relative border-l border-white/20">
+                    <div class="absolute inset-0 bg-brand-950"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                        <div class="text-white">
+                            <span class="block text-brand-200 uppercase tracking-widest text-sm mb-3">Limited Edition</span>
+                            <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold uppercase tracking-tighter mb-6 leading-none text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 drop-shadow-2xl">The Dark <br> Series</h2>
+                            <a href="shop.html" class="inline-block border border-white px-8 py-3 font-bold uppercase tracking-wider hover:bg-white hover:text-brand-950 transition">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="min-w-full h-full relative border-l border-white/20">
+                    <div class="absolute inset-0 bg-red-700"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                        <div class="text-white">
+                            <span class="block text-white/80 uppercase tracking-widest text-sm mb-3">End of Season</span>
+                            <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold uppercase tracking-tighter mb-6 leading-none drop-shadow-2xl">Mega <br> Sale</h2>
+                            <a href="shop.html" class="inline-block bg-white text-red-700 px-8 py-3 font-bold uppercase tracking-wider hover:bg-gray-100 transition">Up to 50% Off</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controls -->
+            <button id="slider-prev" onclick="moveSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm transition opacity-0 group-hover:opacity-100 z-10 hidden sm:flex">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="slider-next" onclick="moveSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm transition opacity-0 group-hover:opacity-100 z-10 hidden sm:flex">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            
+            <!-- Indicators -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="slider-indicators">
+                <button onclick="setSlide(0)" class="w-2.5 h-2.5 rounded-full bg-white transition-all w-8"></button>
+                <button onclick="setSlide(1)" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>
+                <button onclick="setSlide(2)" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>
             </div>
         </section>
 
-        <!-- Featured Collections -->
-        <section class="py-24 bg-brand-50">
+        <!-- Category Bubbles -->
+        <section class="py-10 bg-white border-b border-gray-100 reveal">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-end mb-12 reveal">
-                    <div>
-                        <h2 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tighter">Latest Drops</h2>
-                        <p class="text-brand-500 mt-2">Discover the newest additions to our collection.</p>
-                    </div>
-                    <a href="shop.html"
-                        class="hidden sm:inline-block text-brand-950 font-bold uppercase tracking-wider border-b-2 border-brand-950 hover:text-brand-500 hover:border-brand-500 transition-colors pb-1">View
-                        All</a>
+                <div class="flex overflow-x-auto space-x-6 sm:space-x-8 lg:justify-center pb-4 hide-scrollbar">
+                    
+                    <a href="shop.html" class="flex flex-col items-center min-w-[70px] sm:min-w-[80px] group">
+                        <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-brand-950 transition-all overflow-hidden relative">
+                            <i class="fa-solid fa-shirt text-xl sm:text-2xl text-gray-500 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-center text-gray-700 group-hover:text-brand-950">T-Shirts</span>
+                    </a>
+                    
+                    <a href="shop.html" class="flex flex-col items-center min-w-[70px] sm:min-w-[80px] group">
+                        <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-brand-950 transition-all overflow-hidden relative">
+                           <i class="fa-solid fa-vest text-xl sm:text-2xl text-gray-500 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-center text-gray-700 group-hover:text-brand-950">Outerwear</span>
+                    </a>
+                    
+                    <a href="shop.html" class="flex flex-col items-center min-w-[70px] sm:min-w-[80px] group">
+                        <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-brand-950 transition-all overflow-hidden relative">
+                            <i class="fa-solid fa-tags text-xl sm:text-2xl text-gray-500 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-center text-gray-700 group-hover:text-brand-950">Bottoms</span>
+                    </a>
+                    
+                    <a href="shop.html" class="flex flex-col items-center min-w-[70px] sm:min-w-[80px] group">
+                        <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-brand-950 transition-all overflow-hidden relative">
+                            <i class="fa-solid fa-hat-cowboy text-xl sm:text-2xl text-gray-500 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-center text-gray-700 group-hover:text-brand-950">Accessories</span>
+                    </a>
+                    
+                    <a href="shop.html" class="flex flex-col items-center min-w-[70px] sm:min-w-[80px] group">
+                        <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-red-50 border border-red-100 flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-red-500 transition-all overflow-hidden relative">
+                            <i class="fa-solid fa-percent text-xl sm:text-2xl text-red-500 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-center text-red-600">Sale</span>
+                    </a>
+                    
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Product 1 -->
-                    <div class="group reveal cursor-pointer">
-                        <div
-                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
-                            <!-- Update with product image -->
-                            <img src="images/tshirt-model.png" alt="Raksha Mask T-Shirt (Model)"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
-                            </div>
-
-                            <!-- Quick add button -->
-                            <div
-                                class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('index-p1', 'DTF T-Shirt (Model)', 'Rs. 1999.00')"
-                                    class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex justify-center items-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
-                                </button>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900">DTF T-Shirt</h3>
-                                <p class="text-brand-400 text-sm">Midnight Black</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950">Rs. 1999.00</span>
-                        </div>
-                        
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-index-p1" class="sr-only">Size</label>
-                                <select id="size-index-p1" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="S">Size: S</option>
-                                    <option value="M" selected>Size: M</option>
-                                    <option value="L">Size: L</option>
-                                    <option value="XL">Size: XL</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-index-p1" class="sr-only">Color</label>
-                                <select id="color-index-p1" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Midnight Black" selected>Black</option>
-                                    <option value="White">White</option>
-                                </select>
+            </div>
+        </section>
+        
+        <!-- Flash Sale Section -->
+        <section class="py-12 bg-white reveal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 bg-brand-50 p-4 md:p-6 rounded-md border border-gray-200">
+                    <div class="flex items-center gap-4 mb-4 md:mb-0 w-full md:w-auto justify-between md:justify-start">
+                        <h2 class="text-xl md:text-2xl font-extrabold uppercase tracking-tighter text-red-600 flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-yellow-500"></i> Flash Sale
+                        </h2>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-500 text-sm font-medium hidden sm:block">Ending in</span>
+                            <!-- Timer -->
+                            <div class="flex gap-1 md:gap-2 text-center" id="flash-sale-timer">
+                                <div class="bg-brand-950 text-white rounded px-2 py-1 min-w-[36px] md:min-w-[40px]">
+                                    <span class="text-sm md:text-lg font-bold block" id="timer-hours">08</span>
+                                    <span class="text-[8px] md:text-[10px] uppercase">Hrs</span>
+                                </div>
+                                <span class="text-lg md:text-xl font-bold pt-1">:</span>
+                                <div class="bg-brand-950 text-white rounded px-2 py-1 min-w-[36px] md:min-w-[40px]">
+                                    <span class="text-sm md:text-lg font-bold block" id="timer-minutes">45</span>
+                                    <span class="text-[8px] md:text-[10px] uppercase">Min</span>
+                                </div>
+                                <span class="text-lg md:text-xl font-bold pt-1">:</span>
+                                <div class="bg-brand-950 text-white rounded px-2 py-1 min-w-[36px] md:min-w-[40px]">
+                                    <span class="text-sm md:text-lg font-bold block" id="timer-seconds">12</span>
+                                    <span class="text-[8px] md:text-[10px] uppercase">Sec</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Product 2 -->
-                    <div class="group reveal cursor-pointer" style="transition-delay: 100ms;">
-                        <div
-                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
-                            <!-- Update with product image -->
-                            <img src="images/tshirt-flat.jpg" alt="Raksha Mask T-Shirt (Flat)"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
-                            </div>
-
-                            <!-- Badges -->
-                            <div class="absolute top-4 left-4">
-                                <span
-                                    class="bg-brand-950 text-white text-xs font-bold px-2 py-1 uppercase tracking-wider">New
-                                    Drop</span>
-                            </div>
-
-                            <!-- Quick add button -->
-                            <div
-                                class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('index-p2', 'DTF T-Shirt (Flat)', 'Rs. 1999.00')"
-                                    class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex justify-center items-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
-                                </button>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900">DTF T-Shirt</h3>
-                                <p class="text-brand-400 text-sm">Midnight Black</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950">Rs. 1999.00</span>
-                        </div>
-                        
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-index-p2" class="sr-only">Size</label>
-                                <select id="size-index-p2" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="S">Size: S</option>
-                                    <option value="M" selected>Size: M</option>
-                                    <option value="L">Size: L</option>
-                                    <option value="XL">Size: XL</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-index-p2" class="sr-only">Color</label>
-                                <select id="color-index-p2" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Midnight Black" selected>Black</option>
-                                    <option value="White">White</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category Promo -->
-                    <div class="group reveal cursor-pointer relative overflow-hidden rounded-sm hidden lg:block"
-                        style="transition-delay: 200ms;">
-                        <div class="absolute inset-0 bg-brand-900"></div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-brand-900 to-brand-700 opacity-90"></div>
-                        <div
-                            class="relative h-full flex flex-col items-center justify-center text-center p-8 text-white glass-panel border-none">
-                            <i
-                                class="fa-solid fa-shirt text-4xl mb-4 text-brand-200 transform group-hover:scale-110 transition-transform duration-500"></i>
-                            <h3 class="text-3xl font-extrabold uppercase tracking-tighter mb-2">The Basics Collection
-                            </h3>
-                            <p class="text-brand-200 mb-8 text-sm">Elevated everyday essentials.</p>
-                            <a href="shop.html"
-                                class="inline-block border border-white px-6 py-2 uppercase tracking-wider text-sm font-bold hover:bg-white hover:text-brand-950 transition-colors">Explore
-                                Category</a>
-                        </div>
-                    </div>
+                    <a href="shop.html" class="text-brand-950 font-bold uppercase tracking-wider text-sm border-b border-brand-950 pb-0.5 hover:text-red-600 hover:border-red-600 transition-colors shrink-0">View All</a>
                 </div>
-
-                <div class="mt-8 text-center sm:hidden reveal">
-                    <a href="shop.html"
-                        class="inline-block border border-brand-950 text-brand-950 font-bold uppercase tracking-wider px-8 py-3 hover:bg-brand-950 hover:text-white transition-colors w-full">View
-                        All Products</a>
+                
+                <!-- Flash Sale Products -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <!-- FS Product 1 -->
+                    <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-30%</div>
+                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                            <img src="images/tshirt-flat.jpg" alt="Basic Tee" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 border-t border-gray-100">
+                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Essential Basics Tee</h3>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="font-bold text-brand-950">Rs. 1,400</span>
+                                <span class="text-xs text-gray-400 line-through">Rs. 2,000</span>
+                            </div>
+                            <!-- Progress bar for items sold -->
+                            <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
+                                <div class="bg-red-500 h-1.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-3">85 sold</p>
+                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- FS Product 2 -->
+                    <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-40%</div>
+                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                            <i class="fa-solid fa-shirt text-6xl text-gray-300"></i>
+                        </div>
+                        <div class="p-4 border-t border-gray-100">
+                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Oversized Wash Tee</h3>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="font-bold text-brand-950">Rs. 2,100</span>
+                                <span class="text-xs text-gray-400 line-through">Rs. 3,500</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
+                                <div class="bg-orange-400 h-1.5 rounded-full" style="width: 45%"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-3">45 sold</p>
+                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- FS Product 3 -->
+                    <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative hidden sm:block">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-25%</div>
+                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                            <i class="fa-solid fa-tags text-6xl text-gray-300"></i>
+                        </div>
+                        <div class="p-4 border-t border-gray-100">
+                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Cargo Utility Pants</h3>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="font-bold text-brand-950">Rs. 4,500</span>
+                                <span class="text-xs text-gray-400 line-through">Rs. 6,000</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
+                                <div class="bg-red-500 h-1.5 rounded-full" style="width: 92%"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-3">92 sold</p>
+                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- FS Product 4 -->
+                    <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative hidden lg:block">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-50%</div>
+                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                            <i class="fa-solid fa-hat-cowboy text-6xl text-gray-300"></i>
+                        </div>
+                        <div class="p-4 border-t border-gray-100">
+                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Ribbed Beanie</h3>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="font-bold text-brand-950">Rs. 1,000</span>
+                                <span class="text-xs text-gray-400 line-through">Rs. 2,000</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
+                                <div class="bg-green-500 h-1.5 rounded-full" style="width: 15%"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-3">15 sold</p>
+                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Brand Values Marquee -->
-        <section class="border-y border-gray-200 bg-white overflow-hidden py-5">
-            <div class="flex w-[200%] animate-marquee">
-                <div
-                    class="flex items-center space-x-12 px-6 text-xl font-bold uppercase tracking-wider text-brand-300 w-1/2 justify-around">
-                    <span><i class="fa-solid fa-truck-fast mr-2"></i> Shipping Worldwide</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-leaf mr-2"></i> Sustainable Materials</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-shirt mr-2"></i> Premium Quality</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-rotate-left mr-2"></i> 30-Day Returns</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-shirt mr-2"></i> High Quality DTF Print</span>
+        <!-- Recommended / Just For You Grid -->
+        <section class="py-16 bg-gray-50 border-t border-gray-100 reveal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl md:text-4xl font-extrabold uppercase tracking-tighter text-brand-950 mb-3">Just For You</h2>
+                    <div class="w-16 h-1 bg-brand-950 mx-auto mb-4"></div>
+                    <p class="text-gray-500 font-medium">Personalized recommendations based on your style.</p>
                 </div>
-                <div
-                    class="flex items-center space-x-12 px-6 text-xl font-bold uppercase tracking-wider text-brand-300 w-1/2 justify-around">
-                    <span><i class="fa-solid fa-truck-fast mr-2"></i> Shipping Worldwide</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-leaf mr-2"></i> Sustainable Materials</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-shirt mr-2"></i> Premium Quality</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-rotate-left mr-2"></i> 30-Day Returns</span>
-                    <span>•</span>
-                    <span><i class="fa-solid fa-shirt mr-2"></i> High Quality DTF Print</span>
 
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-5">
+                    <!-- Recommended Product 1 -->
+                    <div class="group cursor-pointer bg-white border border-gray-100 hover:shadow-lg transition-all rounded-md overflow-hidden relative pb-3">
+                        <div class="absolute top-2 right-2 z-10">
+                            <button class="bg-white/80 hover:bg-white text-gray-400 hover:text-red-500 w-8 h-8 rounded-full flex items-center justify-center transition backdrop-blur-sm shadow-sm">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
+                            <img src="images/tshirt-flat.jpg" alt="Product" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                            <!-- Quick View Button -->
+                            <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Graphic Print Oversized Tee</h3>
+                            <div class="flex items-center gap-1 mb-2">
+                                <div class="flex text-yellow-400 text-[8px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-[10px] text-gray-400">(124)</span>
+                            </div>
+                            <span class="font-bold text-sm text-brand-950">Rs. 2,200</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Recommended Product 2 -->
+                    <div class="group cursor-pointer bg-white border border-gray-100 hover:shadow-lg transition-all rounded-md overflow-hidden relative pb-3">
+                        <div class="absolute top-2 right-2 z-10">
+                            <button class="bg-white/80 hover:bg-white text-gray-400 hover:text-red-500 w-8 h-8 rounded-full flex items-center justify-center transition backdrop-blur-sm shadow-sm">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
+                            <img src="images/tshirt-model.png" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Premium Heavyweight Hoodie</h3>
+                            <div class="flex items-center gap-1 mb-2">
+                                <div class="flex text-yellow-400 text-[8px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                </div>
+                                <span class="text-[10px] text-gray-400">(89)</span>
+                            </div>
+                            <span class="font-bold text-sm text-brand-950">Rs. 4,500</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Recommended Product 3 -->
+                    <div class="group cursor-pointer bg-white border border-gray-100 hover:shadow-lg transition-all rounded-md overflow-hidden relative pb-3">
+                        <div class="absolute top-2 right-2 z-10">
+                            <button class="bg-white/80 hover:bg-white text-gray-400 hover:text-red-500 w-8 h-8 rounded-full flex items-center justify-center transition backdrop-blur-sm shadow-sm">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
+                            <i class="fa-solid fa-tags text-4xl text-gray-300"></i>
+                            <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Relaxed Fit Cargo Pants</h3>
+                            <div class="flex items-center gap-1 mb-2">
+                                <div class="flex text-yellow-400 text-[8px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-[10px] text-gray-400">(210)</span>
+                            </div>
+                            <span class="font-bold text-sm text-brand-950">Rs. 5,800</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Recommended Product 4 -->
+                    <div class="group cursor-pointer bg-white border border-gray-100 hover:shadow-lg transition-all rounded-md overflow-hidden relative pb-3 hidden sm:block">
+                        <div class="absolute top-2 right-2 z-10">
+                            <button class="bg-white/80 hover:bg-white text-gray-400 hover:text-red-500 w-8 h-8 rounded-full flex items-center justify-center transition backdrop-blur-sm shadow-sm">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
+                            <i class="fa-solid fa-hat-cowboy text-4xl text-gray-300"></i>
+                            <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Signature Logo Cap</h3>
+                            <div class="flex items-center gap-1 mb-2">
+                                <div class="flex text-yellow-400 text-[8px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                </div>
+                                <span class="text-[10px] text-gray-400">(45)</span>
+                            </div>
+                            <span class="font-bold text-sm text-brand-950">Rs. 1,200</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Recommended Product 5 -->
+                    <div class="group cursor-pointer bg-white border border-gray-100 hover:shadow-lg transition-all rounded-md overflow-hidden relative pb-3 hidden lg:block">
+                        <div class="absolute top-2 right-2 z-10">
+                            <button class="bg-white/80 hover:bg-white text-gray-400 hover:text-red-500 w-8 h-8 rounded-full flex items-center justify-center transition backdrop-blur-sm shadow-sm">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
+                            <i class="fa-solid fa-shirt text-4xl text-gray-300"></i>
+                            <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Textured Knit Sweater</h3>
+                            <div class="flex items-center gap-1 mb-2">
+                                <div class="flex text-yellow-400 text-[8px]">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-[10px] text-gray-400">(156)</span>
+                            </div>
+                            <span class="font-bold text-sm text-brand-950">Rs. 3,900</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center reveal">
+                    <button class="bg-white border text-brand-950 font-bold uppercase tracking-wider px-10 py-3 hover:bg-gray-50 transition-colors">Load More</button>
+                </div>
+            </div>
+        </section>
 
+        <!-- Trust/Buyer Protection Badges -->
+        <section class="py-10 bg-white border-y border-gray-100 reveal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="flex flex-col items-center p-2 sm:p-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-50 rounded-full flex items-center justify-center mb-3 text-brand-950 border border-gray-100 shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-lg sm:text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xs sm:text-sm mb-1 uppercase tracking-wider text-brand-950">Secure Payment</h4>
+                        <p class="text-[10px] sm:text-xs text-gray-500">100% secure checkout.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center p-2 sm:p-4 border-l border-gray-100 md:border-none">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-50 rounded-full flex items-center justify-center mb-3 text-brand-950 border border-gray-100 shadow-sm">
+                            <i class="fa-solid fa-truck-fast text-lg sm:text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xs sm:text-sm mb-1 uppercase tracking-wider text-brand-950">Fast Delivery</h4>
+                        <p class="text-[10px] sm:text-xs text-gray-500">Island-wide shipping.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center p-2 sm:p-4 border-t border-gray-100 md:border-none md:border-l">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-50 rounded-full flex items-center justify-center mb-3 text-brand-950 border border-gray-100 shadow-sm">
+                            <i class="fa-solid fa-rotate-left text-lg sm:text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xs sm:text-sm mb-1 uppercase tracking-wider text-brand-950">Easy Returns</h4>
+                        <p class="text-[10px] sm:text-xs text-gray-500">7-day hassle-free returns.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center p-2 sm:p-4 border-t border-l border-gray-100 md:border-none">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-50 rounded-full flex items-center justify-center mb-3 text-brand-950 border border-gray-100 shadow-sm">
+                            <i class="fa-solid fa-headset text-lg sm:text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xs sm:text-sm mb-1 uppercase tracking-wider text-brand-950">24/7 Support</h4>
+                        <p class="text-[10px] sm:text-xs text-gray-500">Dedicated assistance.</p>
+                    </div>
                 </div>
             </div>
         </section>

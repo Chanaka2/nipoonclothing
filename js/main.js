@@ -19,6 +19,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Mobile Filter Toggle ---
+    const mobileFilterBtn = document.getElementById('mobile-filter-btn');
+    const closeFilterBtn = document.getElementById('close-filter-btn');
+    const filterDrawer = document.getElementById('filter-drawer');
+    const filterOverlay = document.getElementById('filter-overlay');
+
+    if (mobileFilterBtn && closeFilterBtn && filterDrawer && filterOverlay) {
+        mobileFilterBtn.addEventListener('click', () => {
+            filterDrawer.classList.remove('translate-x-full');
+            filterOverlay.classList.remove('hidden');
+            setTimeout(() => filterOverlay.classList.remove('opacity-0'), 10);
+            document.body.classList.add('overflow-hidden');
+        });
+
+        const closeFilter = () => {
+            filterDrawer.classList.add('translate-x-full');
+            filterOverlay.classList.add('opacity-0');
+            setTimeout(() => filterOverlay.classList.add('hidden'), 300);
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        closeFilterBtn.addEventListener('click', closeFilter);
+        filterOverlay.addEventListener('click', closeFilter);
+    }
+
     // --- Navbar Scroll Effect ---
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {

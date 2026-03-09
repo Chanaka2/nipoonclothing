@@ -29,59 +29,208 @@
 
 <body class="font-sans bg-brand-50 text-brand-950 antialiased selection:bg-brand-950 selection:text-white pt-20">
 
-    <!-- Navigation -->
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-950 text-white text-xs py-2 px-4 text-center tracking-wide">
+        FREE SHIPPING ON ORDERS OVER RS. 5000 | USE CODE: NIPOON20
+    </div>
+
+    <!-- Main Navigation -->
     <nav id="navbar"
-        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100 py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center gap-3">
-                        <img src="images/logo.jpg" alt="NIPOON Logo" class="h-10 w-auto">
-                        <span class="text-2xl font-extrabold tracking-tighter uppercase">NIPOON.</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html"
-                        class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Home</a>
-                    <a href="shop.html" class="text-brand-950 font-bold border-b-2 border-brand-950 pb-1">Shop</a>
-                    <a href="about.html"
-                        class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">About</a>
-                    <a href="contact.html"
-                        class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Contact</a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <button class="text-brand-950 hover:text-gray-500 transition"><i
-                            class="fa-solid fa-magnifying-glass text-lg"></i></button>
-                    <button class="text-brand-950 hover:text-gray-500 transition"><i
-                            class="fa-regular fa-user text-lg"></i></button>
-                    <button class="text-brand-950 hover:text-gray-500 transition relative">
-                        <i class="fa-solid fa-bag-shopping text-lg"></i>
-                        <span
-                            class="absolute -top-1.5 -right-2 bg-brand-950 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
-                    </button>
-                </div>
+        class="sticky top-0 w-full z-50 transition-all duration-300 bg-white border-b border-gray-100 shadow-sm">
+        <!-- Top Bar: Logo, Search, Icons -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center gap-4 lg:gap-8">
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-brand-950 hover:text-gray-600 focus:outline-none">
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-950 hover:text-brand-500 focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
+
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 lg:gap-3">
+                        <img src="images/logo.jpg" alt="NIPOON Logo" class="h-8 lg:h-10 w-auto">
+                        <span class="text-xl lg:text-2xl font-extrabold tracking-tighter uppercase hidden sm:block">NIPOON.</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar (Desktop) -->
+                <div class="hidden lg:flex flex-1 max-w-2xl relative">
+                    <input type="text" placeholder="Search for products, brands and more..." class="w-full bg-gray-100 border border-transparent focus:border-brand-950 focus:bg-white rounded-l-md py-2.5 px-4 outline-none transition-colors text-sm">
+                    <button class="bg-brand-950 hover:bg-brand-800 text-white px-6 rounded-r-md transition-colors">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- Icons (User, Cart) -->
+                <div class="flex items-center space-x-4 lg:space-x-6">
+                    <a href="#" class="hidden lg:flex flex-col items-center text-brand-950 hover:text-brand-500 transition group">
+                        <i class="fa-regular fa-user text-xl mb-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        <span class="text-[10px] font-medium uppercase">Login</span>
+                    </a>
+                    
+                    <button class="flex flex-col items-center text-brand-950 hover:text-brand-500 transition relative group" id="cart-drawer-btn">
+                        <div class="relative">
+                            <i class="fa-solid fa-bag-shopping text-xl group-hover:-translate-y-0.5 transition-transform"></i>
+                            <span class="absolute -top-1.5 -right-2 bg-red-600 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
+                        </div>
+                        <span class="text-[10px] font-medium uppercase mt-0.5 hidden lg:block">Cart</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search Bar (Visible only on mobile) -->
+            <div class="mt-4 lg:hidden relative flex">
+                <input type="text" placeholder="Search products..." class="w-full bg-gray-100 border border-transparent focus:border-brand-950 rounded-l-md py-2 px-4 outline-none text-sm">
+                <button class="bg-brand-950 text-white px-4 rounded-r-md">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Bar: Categories/Links (Desktop) -->
+        <div class="hidden lg:block border-t border-gray-100 bg-gray-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ul class="flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+                    <li><a href="index.html" class="block py-3 text-gray-600 hover:text-brand-950 transition-colors border-b-2 border-transparent hover:border-gray-300">Home</a></li>
+                    <li class="group relative">
+                        <a href="shop.html" class="flex items-center gap-1 py-3 text-brand-950 border-b-2 border-brand-950 transition-colors">
+                            Shop <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <!-- Mega Menu Dropdown -->
+                        <div class="absolute top-full left-0 w-64 bg-white border border-gray-100 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <ul class="py-2">
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">T-Shirts</a></li>
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">Hoodies</a></li>
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">Bottoms</a></li>
+                                <li><a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-950 transition-colors">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="shop.html" class="block py-3 text-red-600 hover:text-red-700 transition-colors font-bold border-b-2 border-transparent hover:border-red-200">Sale %</a></li>
+                    <li><a href="about.html" class="block py-3 text-gray-600 hover:text-brand-950 transition-colors border-b-2 border-transparent hover:border-gray-300">About</a></li>
+                    <li><a href="contact.html" class="block py-3 text-gray-600 hover:text-brand-950 transition-colors border-b-2 border-transparent hover:border-gray-300">Contact</a></li>
+                </ul>
             </div>
         </div>
 
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
-            class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 md:hidden flex flex-col pt-20 px-6">
-            <button id="close-menu-btn" class="absolute top-6 right-6 text-brand-950 text-2xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="flex flex-col space-y-6 text-xl font-medium mt-8">
-                <a href="index.html" class="border-b border-gray-100 pb-4">Home</a>
-                <a href="shop.html" class="border-b border-gray-100 pb-4 text-brand-500">Shop</a>
-                <a href="about.html" class="border-b border-gray-100 pb-4">About</a>
-                <a href="contact.html" class="border-b border-gray-100 pb-4">Contact</a>
+            class="fixed inset-0 z-50 bg-white transform -translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-4 px-0 shadow-2xl w-[85%] max-w-sm">
+            <div class="flex justify-between items-center px-6 pb-4 border-b border-gray-100">
+                <span class="font-extrabold text-xl tracking-tighter uppercase">Menu</span>
+                <button id="close-menu-btn" class="text-brand-950 text-2xl hover:text-red-500 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto">
+                <div class="flex flex-col text-lg font-medium mt-4">
+                    <a href="index.html" class="px-6 py-4 border-b border-gray-100 bg-gray-50 text-gray-700 hover:text-brand-950">Home</a>
+                    
+                    <!-- Mobile Categories Accordion -->
+                    <div class="border-b border-gray-100">
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-brand-950" id="mobile-shop-btn">
+                            Shop
+                            <i class="fa-solid fa-chevron-down text-sm transition-transform duration-200" id="mobile-shop-icon"></i>
+                        </button>
+                        <div class="hidden bg-gray-50 px-8 py-2 space-y-3 pb-4" id="mobile-shop-links">
+                            <a href="shop.html" class="block text-gray-600 text-base border-l-2 border-transparent hover:border-brand-950 pl-2">All Products</a>
+                            <a href="shop.html" class="block text-gray-600 text-base border-l-2 border-transparent hover:border-brand-950 pl-2">T-Shirts</a>
+                            <a href="shop.html" class="block text-gray-600 text-base border-l-2 border-transparent hover:border-brand-950 pl-2">Hoodies</a>
+                        </div>
+                    </div>
+                    
+                    <a href="shop.html" class="px-6 py-4 border-b border-gray-100 text-red-600 font-bold">Sale %</a>
+                    <a href="about.html" class="px-6 py-4 border-b border-gray-100 text-gray-700 hover:text-brand-950">About</a>
+                    <a href="contact.html" class="px-6 py-4 border-b border-gray-100 text-gray-700 hover:text-brand-950">Contact</a>
+                </div>
+            </div>
+            
+            <div class="p-6 border-t border-gray-100 bg-gray-50">
+                <a href="#" class="flex items-center gap-3 text-brand-950 font-medium">
+                    <i class="fa-regular fa-user text-xl"></i> Login / Register
+                </a>
             </div>
         </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
+        
+        <!-- Mobile Filter Slide-out Panel -->
+        <div id="filter-drawer" class="fixed inset-y-0 right-0 z-[60] w-[85%] max-w-sm bg-white shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col lg:hidden">
+            <div class="flex justify-between items-center p-4 border-b border-gray-100">
+                <span class="font-extrabold text-xl tracking-tighter uppercase">Filter & Sort</span>
+                <button id="close-filter-btn" class="text-brand-950 text-2xl hover:text-red-500 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-4 border-b border-gray-100">
+                <h3 class="font-bold uppercase tracking-wider mb-2 text-sm">Sort By</h3>
+                <select class="w-full border border-gray-300 p-3 bg-gray-50 text-sm font-medium focus:outline-none focus:border-brand-950 text-brand-950 cursor-pointer">
+                    <option>Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest Arrivals</option>
+                </select>
+            </div>
+            <div class="flex-1 overflow-y-auto p-4 space-y-8">
+                <div>
+                    <h3 class="font-bold uppercase tracking-wider mb-4 border-b border-gray-200 pb-3">Category</h3>
+                    <ul class="space-y-4 text-brand-600">
+                        <li><a href="#" class="font-medium text-brand-950 flex justify-between">All Products <span>(12)</span></a></li>
+                        <li><a href="#" class="flex justify-between">T-Shirts <span>(4)</span></a></li>
+                        <li><a href="#" class="flex justify-between">Outerwear <span>(3)</span></a></li>
+                        <li><a href="#" class="flex justify-between">Bottoms <span>(3)</span></a></li>
+                        <li><a href="#" class="flex justify-between">Accessories <span>(2)</span></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold uppercase tracking-wider mb-4 border-b border-gray-200 pb-3">Price</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-brand-950 border-gray-300 rounded focus:ring-brand-950">
+                            <span class="text-brand-600 flex-1">Under Rs. 3,000</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-brand-950 border-gray-300 rounded focus:ring-brand-950">
+                            <span class="text-brand-600 flex-1">Rs. 3,000 - Rs. 6,000</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-brand-950 border-gray-300 rounded focus:ring-brand-950">
+                            <span class="text-brand-600 flex-1">Over Rs. 6,000</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold uppercase tracking-wider mb-4 border-b border-gray-200 pb-3">Color</h3>
+                    <div class="grid grid-cols-5 gap-2">
+                        <button class="w-8 h-8 rounded-full bg-black border border-gray-200 ring-2 ring-transparent" title="Black"></button>
+                        <button class="w-8 h-8 rounded-full bg-white border border-gray-300 ring-2 ring-transparent" title="White"></button>
+                        <button class="w-8 h-8 rounded-full bg-gray-400 border border-gray-200 ring-2 ring-transparent" title="Grey"></button>
+                        <button class="w-8 h-8 rounded-full bg-[#556B2F] border border-gray-200 ring-2 ring-transparent" title="Olive"></button>
+                        <button class="w-8 h-8 rounded-full bg-blue-900 border border-gray-200 ring-2 ring-transparent" title="Navy"></button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold uppercase tracking-wider mb-4 border-b border-gray-200 pb-3">Size</h3>
+                    <div class="grid grid-cols-3 gap-3">
+                        <button class="w-full h-10 border border-gray-300 flex items-center justify-center">S</button>
+                        <button class="w-full h-10 border border-brand-950 bg-brand-950 text-white flex items-center justify-center">M</button>
+                        <button class="w-full h-10 border border-gray-300 flex items-center justify-center">L</button>
+                        <button class="w-full h-10 border border-gray-300 flex items-center justify-center">XL</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gray-100 flex gap-3">
+                <button class="w-1/2 border-2 border-brand-950 text-brand-950 font-bold uppercase py-3 hover:bg-gray-50 transition-colors">Clear All</button>
+                <button class="w-1/2 bg-brand-950 border-2 border-brand-950 text-white font-bold uppercase py-3 hover:bg-brand-900 transition-colors">Apply</button>
+            </div>
+        </div>
+        
+        <!-- Filter Overlay -->
+        <div id="filter-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
     </nav>
 
     <!-- Main Content -->
@@ -114,6 +263,39 @@
                                     <span>(2)</span></a></li>
                         </ul>
                     </div>
+                    
+                    <div>
+                        <h3 class="font-bold uppercase tracking-wider mb-4 border-b border-gray-200 pb-3">Price</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" class="form-checkbox h-4 w-4 text-brand-950 border-gray-300 rounded focus:ring-brand-950">
+                                <span class="text-brand-600 group-hover:text-brand-950 transition-colors flex-1">Under Rs. 3,000</span>
+                                <span class="text-gray-400 text-xs">(4)</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" class="form-checkbox h-4 w-4 text-brand-950 border-gray-300 rounded focus:ring-brand-950">
+                                <span class="text-brand-600 group-hover:text-brand-950 transition-colors flex-1">Rs. 3,000 - Rs. 6,000</span>
+                                <span class="text-gray-400 text-xs">(5)</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" class="form-checkbox h-4 w-4 text-brand-950 border-gray-300 rounded focus:ring-brand-950">
+                                <span class="text-brand-600 group-hover:text-brand-950 transition-colors flex-1">Over Rs. 6,000</span>
+                                <span class="text-gray-400 text-xs">(3)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold uppercase tracking-wider mb-4 border-b border-gray-200 pb-3">Color</h3>
+                        <div class="grid grid-cols-5 gap-2">
+                            <button class="w-8 h-8 rounded-full bg-black border border-gray-200 ring-2 ring-transparent hover:ring-gray-300 focus:ring-brand-950 transition-all" title="Black"></button>
+                            <button class="w-8 h-8 rounded-full bg-white border border-gray-300 ring-2 ring-transparent hover:ring-gray-300 focus:ring-brand-950 transition-all" title="White"></button>
+                            <button class="w-8 h-8 rounded-full bg-gray-400 border border-gray-200 ring-2 ring-transparent hover:ring-gray-300 focus:ring-brand-950 transition-all" title="Grey"></button>
+                            <button class="w-8 h-8 rounded-full bg-[#556B2F] border border-gray-200 ring-2 ring-transparent hover:ring-gray-300 focus:ring-brand-950 transition-all" title="Olive"></button>
+                            <button class="w-8 h-8 rounded-full bg-blue-900 border border-gray-200 ring-2 ring-transparent hover:ring-gray-300 focus:ring-brand-950 transition-all" title="Navy"></button>
+                        </div>
+                    </div>
+
                     <div>
                         <h3 class="font-bold uppercase tracking-wider mb-4 border-b border-gray-200 pb-3">Size</h3>
                         <div class="grid grid-cols-3 gap-3">
@@ -132,7 +314,7 @@
 
             <!-- Mobile Filters Toggle -->
             <div class="lg:hidden flex justify-between items-center mb-6 reveal border-y border-gray-200 py-3">
-                <button class="font-bold uppercase tracking-wider flex items-center"><i
+                <button id="mobile-filter-btn" class="font-bold uppercase tracking-wider flex items-center"><i
                         class="fa-solid fa-sliders mr-2"></i> Filter & Sort</button>
                 <span class="text-brand-500 text-sm">12 Results</span>
             </div>
