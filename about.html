@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NIPOON Clothing</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { 50: '#f6f6f6', 100: '#e7e7e7', 200: '#d1d1d1', 300: '#b0b0b0', 400: '#888888', 500: '#6d6d6d', 600: '#5d5d5d', 700: '#4f4f4f', 800: '#454545', 900: '#3d3d3d', 950: '#000000' } },
+                    animation: { 'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards' },
+                    keyframes: { fadeInUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans bg-brand-50 text-brand-950 antialiased selection:bg-brand-950 selection:text-white pt-20">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="images/logo.jpg" alt="NIPOON Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-extrabold tracking-tighter uppercase">NIPOON.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Home</a>
+                    <a href="shop.html" class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Shop</a>
+                    <a href="about.html" class="text-brand-950 font-bold border-b-2 border-brand-950 pb-1">About</a>
+                    <a href="contact.html" class="text-brand-950 font-medium hover:text-gray-500 transition-colors duration-200">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <button class="text-brand-950 hover:text-gray-500 transition"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
+                    <button class="text-brand-950 hover:text-gray-500 transition"><i class="fa-regular fa-user text-lg"></i></button>
+                    <button class="text-brand-950 hover:text-gray-500 transition relative">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span class="absolute -top-1.5 -right-2 bg-brand-950 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-950 hover:text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 md:hidden flex flex-col pt-20 px-6">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-brand-950 text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex flex-col space-y-6 text-xl font-medium mt-8">
+                <a href="index.html" class="border-b border-gray-100 pb-4">Home</a>
+                <a href="shop.html" class="border-b border-gray-100 pb-4">Shop</a>
+                <a href="about.html" class="border-b border-gray-100 pb-4 text-brand-500">About</a>
+                <a href="contact.html" class="border-b border-gray-100 pb-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Hero -->
+        <section class="max-w-4xl mx-auto px-4 py-24 text-center reveal">
+            <span class="block text-brand-500 uppercase tracking-[0.2em] font-medium mb-4 text-sm">Our Origins</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold uppercase tracking-tighter mb-8 leading-none">
+                Born From <br>The Streets.
+            </h1>
+            <p class="text-xl md:text-2xl text-brand-600 font-light leading-relaxed">
+                NIPOON Clothing is more than a brand. It's a movement bridging the gap between high fashion and everyday streetwear. We craft timeless pieces for the modern aesthetic.
+            </p>
+        </section>
+
+        <!-- Image Break -->
+        <section class="w-full relative h-[60vh] md:h-[80vh] bg-brand-900 reveal" style="transition-delay: 200ms;">
+            <img src="images/hero.png" alt="NIPOON Philosophy" class="w-full h-full object-cover opacity-80 filter grayscale hover:grayscale-0 transition-all duration-1000">
+            <div class="absolute inset-0 flex items-center justify-center mix-blend-overlay opacity-50 bg-brand-950"></div>
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-50 to-transparent"></div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tighter mb-6">Our Philosophy</h2>
+                    <p class="text-brand-600 mb-6 text-lg font-light leading-relaxed">
+                        We believe that what you wear defines your statement to the world. Every thread, every stitch, and every completely oversized fit is designed with intent. 
+                    </p>
+                    <p class="text-brand-600 mb-8 text-lg font-light leading-relaxed">
+                        NIPOON embraces simplicity and premium materials. Our design language removes the unnecessary to amplify the essential. It's not just apparel; it's armor for your daily journey.
+                    </p>
+                    <a href="shop.html" class="inline-block border border-brand-950 text-brand-950 font-bold uppercase tracking-wider px-8 py-4 hover:bg-brand-950 hover:text-white transition-colors">See the Collection</a>
+                </div>
+                <div class="grid grid-cols-2 gap-4 reveal" style="transition-delay: 150ms;">
+                    <div class="bg-gray-200 aspect-square overflow-hidden rounded-sm">
+                        <img src="images/product1.png" alt="Detail 1" class="w-full h-full object-cover scale-150 transform translate-y-8 hover:scale-125 transition-transform duration-700">
+                    </div>
+                    <div class="bg-gray-200 aspect-[3/4] overflow-hidden rounded-sm mt-12">
+                        <img src="images/product2.png" alt="Detail 2" class="w-full h-full object-cover scale-150 transform hover:scale-125 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Info -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-3 mb-6">
+                        <img src="images/logo.jpg" alt="NIPOON Logo" class="h-12 w-auto filter invert">
+                        <span class="text-3xl font-extrabold tracking-tighter uppercase">NIPOON.</span>
+                    </a>
+                    <p class="text-gray-400 mb-6 font-light">Redefining modern streetwear with uncompromising quality and minimalist aesthetics.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61572880286704&mibextid=wwXIfr" target="_blank"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-brand-950 transition-colors"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/nipoonclothing?igsh=bDk2ZzZsZWJvaHpy&utm_source=qr" target="_blank"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-brand-950 transition-colors"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@nipoonclothing" target="_blank"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-brand-950 transition-colors"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-bold uppercase tracking-wider mb-6">Shop</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition-colors">All Products</a></li>
+                        <li><a href="shop.html" class="hover:text-white transition-colors">New Arrivals</a></li>
+                        <li><a href="shop.html" class="hover:text-white transition-colors">Best Sellers</a></li>
+                        <li><a href="shop.html" class="hover:text-white transition-colors">Accessories</a></li>
+                    </ul>
+                </div>
+                <!-- Assistance -->
+                <div>
+                    <h4 class="text-lg font-bold uppercase tracking-wider mb-6">Assistance</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Size Guide</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold uppercase tracking-wider mb-6">Join The Club</h4>
+                    <p class="text-gray-400 mb-4 font-light">Subscribe for early access to drops and exclusive offers.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Email Address" class="bg-brand-900 border border-brand-800 text-white px-4 py-3 focus:outline-none focus:border-white transition-colors" required>
+                        <button type="submit" class="bg-white text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-gray-200 transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 NIPOON Clothing. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
