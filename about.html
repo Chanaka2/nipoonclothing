@@ -264,6 +264,48 @@
             </div>
         </div>
     </footer>
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4">
+        <div id="quick-view-overlay" class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity opacity-0"></div>
+        <div class="bg-white w-full max-w-4xl relative z-10 rounded-lg overflow-hidden shadow-2xl transform scale-95 opacity-0 transition-all duration-300 flex flex-col md:flex-row max-h-[90vh]">
+            <button id="close-quick-view" class="absolute top-4 right-4 text-brand-950 text-2xl hover:text-red-500 z-20">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="md:w-1/2 bg-gray-50 flex items-center justify-center p-8">
+                <img id="qv-image" src="" alt="Product" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="md:w-1/2 p-8 overflow-y-auto">
+                <div class="space-y-6">
+                    <div>
+                        <span id="qv-category" class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Collection</span>
+                        <h2 id="qv-title" class="text-3xl font-extrabold uppercase tracking-tighter text-brand-950 mt-2">Product Title</h2>
+                        <p id="qv-price" class="text-2xl font-bold text-brand-950 mt-2">Rs. 0.00</p>
+                    </div>
+                    <p id="qv-description" class="text-gray-500 text-sm leading-relaxed">Premium quality streetwear designed for comfort and style.</p>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider mb-3">Color: <span id="qv-selected-color" class="text-gray-400 font-medium">Select Color</span></h4>
+                        <div id="qv-colors" class="flex gap-3"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider mb-3">Size: <span id="qv-selected-size" class="text-gray-400 font-medium">Select Size</span></h4>
+                        <div id="qv-sizes" class="flex gap-3"></div>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="flex items-center border border-gray-200 rounded">
+                            <button onclick="updateQVQty(-1)" class="w-10 h-10 flex items-center justify-center hover:bg-gray-50">-</button>
+                            <span id="qv-qty" class="w-12 text-center font-bold">1</span>
+                            <button onclick="updateQVQty(1)" class="w-10 h-10 flex items-center justify-center hover:bg-gray-50">+</button>
+                        </div>
+                        <button id="qv-add-btn" class="flex-1 bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">Add to Bag</button>
+                    </div>
+                    <button id="qv-buy-btn" class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors flex items-center justify-center gap-1">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Buy via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Cart Drawer -->
     <div id="cart-drawer" class="fixed inset-y-0 right-0 z-[100] w-[90%] max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
         <div class="px-6 py-5 border-b border-gray-100 flex justify-between items-center bg-gray-50">
@@ -292,10 +334,10 @@
             </div>
             <p class="text-[10px] text-gray-400 font-medium">Shipping & taxes calculated at checkout.</p>
             <div class="space-y-3 pt-2">
-                <button class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
+                <button onclick="checkoutWhatsApp()" class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
                     Checkout Now <i class="fa-solid fa-arrow-right text-sm"></i>
                 </button>
-                <button class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">View Bag Details</button>
+                <button onclick="document.getElementById('close-cart-btn').click()" class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">Continue Shopping</button>
             </div>
         </div>
     </div>

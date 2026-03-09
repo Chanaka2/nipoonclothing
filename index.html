@@ -337,7 +337,7 @@
                     <!-- FS Product 1 -->
                     <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative">
                         <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-30%</div>
-                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                        <div onclick="openQuickView('sale-p1')" class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4 cursor-pointer">
                             <img src="images/tshirt-flat.jpg" alt="Basic Tee" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-4 border-t border-gray-100">
@@ -351,38 +351,38 @@
                                 <div class="bg-red-500 h-1.5 rounded-full" style="width: 85%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">85 sold</p>
-                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="openQuickView('sale-p1')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                     
                     <!-- FS Product 2 -->
                     <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative">
                         <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-40%</div>
-                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                        <div onclick="openQuickView('reco-1')" class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
                             <i class="fa-solid fa-shirt text-6xl text-gray-300"></i>
                         </div>
                         <div class="p-4 border-t border-gray-100">
-                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Oversized Wash Tee</h3>
+                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Graphic Oversized Tee</h3>
                             <div class="flex items-center gap-2 mb-3">
-                                <span class="font-bold text-brand-950">Rs. 2,100</span>
+                                <span class="font-bold text-brand-950">Rs. 2,200</span>
                                 <span class="text-xs text-gray-400 line-through">Rs. 3,500</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
                                 <div class="bg-orange-400 h-1.5 rounded-full" style="width: 45%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">45 sold</p>
-                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="openQuickView('reco-1')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                     
                     <!-- FS Product 3 -->
                     <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative hidden sm:block">
                         <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-25%</div>
-                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                        <div onclick="openQuickView('shop-p2')" class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
                             <i class="fa-solid fa-tags text-6xl text-gray-300"></i>
                         </div>
                         <div class="p-4 border-t border-gray-100">
-                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Cargo Utility Pants</h3>
+                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Minimalist Hoodie</h3>
                             <div class="flex items-center gap-2 mb-3">
                                 <span class="font-bold text-brand-950">Rs. 4,500</span>
                                 <span class="text-xs text-gray-400 line-through">Rs. 6,000</span>
@@ -391,27 +391,27 @@
                                 <div class="bg-red-500 h-1.5 rounded-full" style="width: 92%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">92 sold</p>
-                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="openQuickView('shop-p2')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                     
                     <!-- FS Product 4 -->
                     <div class="group cursor-pointer border border-gray-100 hover:shadow-lg transition-shadow bg-white rounded-md overflow-hidden relative hidden lg:block">
                         <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded z-10">-50%</div>
-                        <div class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
+                        <div onclick="openQuickView('twoton-5')" class="relative bg-gray-50 aspect-[4/5] overflow-hidden flex items-center justify-center p-4">
                             <i class="fa-solid fa-hat-cowboy text-6xl text-gray-300"></i>
                         </div>
                         <div class="p-4 border-t border-gray-100">
-                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Ribbed Beanie</h3>
+                            <h3 class="font-bold text-sm text-brand-900 truncate mb-1">Two-Tone Slate Tee</h3>
                             <div class="flex items-center gap-2 mb-3">
-                                <span class="font-bold text-brand-950">Rs. 1,000</span>
+                                <span class="font-bold text-brand-950">Rs. 999.00</span>
                                 <span class="text-xs text-gray-400 line-through">Rs. 2,000</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
                                 <div class="bg-green-500 h-1.5 rounded-full" style="width: 15%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">15 sold</p>
-                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="openQuickView('twoton-5')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -428,32 +428,32 @@
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-5">
-                    <!-- Recommended Product 1 -->
+                    <!-- Recommended Product 1: Two-Ton Signature -->
                     <div class="group cursor-pointer bg-white border border-gray-100 hover:shadow-lg transition-all rounded-md overflow-hidden relative pb-3">
                         <div class="absolute top-2 right-2 z-10">
                             <button class="bg-white/80 hover:bg-white text-gray-400 hover:text-red-500 w-8 h-8 rounded-full flex items-center justify-center transition backdrop-blur-sm shadow-sm">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
-                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
-                            <img src="images/tshirt-flat.jpg" alt="Product" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <div onclick="openQuickView('twoton-1')" class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3 cursor-pointer">
+                            <img src="images/two ton t-shirt (1).png" alt="Two-Ton Signature" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                             <!-- Quick View & Add Button -->
                             <div class="absolute bottom-2 left-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="flex-1 bg-white/95 text-brand-950 text-[10px] font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
-                                <button onclick="addToCart('reco-1', 'Graphic Print Oversized Tee', 'Rs. 2,200', 'images/tshirt-flat.jpg')" class="bg-brand-950 text-white px-3 py-2 rounded-sm hover:bg-brand-800 shadow">
+                                <button onclick="openQuickView('twoton-1')" class="flex-1 bg-white/95 text-brand-950 text-[10px] font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                                <button onclick="openQuickView('twoton-1')" class="bg-brand-950 text-white px-3 py-2 rounded-sm hover:bg-brand-800 shadow">
                                     <i class="fa-solid fa-plus text-[10px]"></i>
                                 </button>
                             </div>
                         </div>
                         <div class="px-3">
-                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Graphic Print Oversized Tee</h3>
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Two-Ton Signature Tee</h3>
                             <div class="flex items-center gap-1 mb-2">
                                 <div class="flex text-yellow-400 text-[8px]">
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
                                 </div>
-                                <span class="text-[10px] text-gray-400">(124)</span>
+                                <span class="text-[10px] text-gray-400">(128)</span>
                             </div>
-                            <span class="font-bold text-sm text-brand-950">Rs. 2,200</span>
+                            <span class="font-bold text-sm text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
                     
@@ -464,21 +464,21 @@
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
-                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
-                            <img src="images/tshirt-model.png" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div onclick="openQuickView('reco-1')" class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3 cursor-pointer">
+                            <img src="images/tshirt-flat.jpg" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                                <button onclick="openQuickView('reco-1')" class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
                             </div>
                         </div>
                         <div class="px-3">
-                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Premium Heavyweight Hoodie</h3>
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Graphic Oversized Tee</h3>
                             <div class="flex items-center gap-1 mb-2">
                                 <div class="flex text-yellow-400 text-[8px]">
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
                                 </div>
                                 <span class="text-[10px] text-gray-400">(89)</span>
                             </div>
-                            <span class="font-bold text-sm text-brand-950">Rs. 4,500</span>
+                            <span class="font-bold text-sm text-brand-950">Rs. 2,200</span>
                         </div>
                     </div>
                     
@@ -489,21 +489,21 @@
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
-                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
-                            <i class="fa-solid fa-tags text-4xl text-gray-300"></i>
+                        <div onclick="openQuickView('shop-p2')" class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3 cursor-pointer">
+                            <img src="images/product2.png" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                                <button onclick="openQuickView('shop-p2')" class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
                             </div>
                         </div>
                         <div class="px-3">
-                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Relaxed Fit Cargo Pants</h3>
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Minimalist Hoodie</h3>
                             <div class="flex items-center gap-1 mb-2">
                                 <div class="flex text-yellow-400 text-[8px]">
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                 </div>
                                 <span class="text-[10px] text-gray-400">(210)</span>
                             </div>
-                            <span class="font-bold text-sm text-brand-950">Rs. 5,800</span>
+                            <span class="font-bold text-sm text-brand-950">Rs. 4,500</span>
                         </div>
                     </div>
                     
@@ -514,21 +514,21 @@
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
-                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
-                            <i class="fa-solid fa-hat-cowboy text-4xl text-gray-300"></i>
+                        <div onclick="openQuickView('twoton-6')" class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3 cursor-pointer">
+                            <img src="images/two ton t-shirt (6).png" alt="Two-Ton Forest" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                                <button onclick="openQuickView('twoton-6')" class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
                             </div>
                         </div>
                         <div class="px-3">
-                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Signature Logo Cap</h3>
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Two-Tone Forest Tee</h3>
                             <div class="flex items-center gap-1 mb-2">
                                 <div class="flex text-yellow-400 text-[8px]">
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                                 </div>
                                 <span class="text-[10px] text-gray-400">(45)</span>
                             </div>
-                            <span class="font-bold text-sm text-brand-950">Rs. 1,200</span>
+                            <span class="font-bold text-sm text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
                     
@@ -539,27 +539,27 @@
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
-                        <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
-                            <i class="fa-solid fa-shirt text-4xl text-gray-300"></i>
+                        <div onclick="openQuickView('twoton-8')" class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3 cursor-pointer">
+                            <img src="images/two ton t-shirt (8).png" alt="Two-Ton Royal" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                                <button onclick="openQuickView('twoton-8')" class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
                             </div>
                         </div>
                         <div class="px-3">
-                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Textured Knit Sweater</h3>
+                            <h3 class="font-bold text-xs text-brand-900 truncate mb-1">Two-Tone Royal Tee</h3>
                             <div class="flex items-center gap-1 mb-2">
                                 <div class="flex text-yellow-400 text-[8px]">
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
                                 </div>
                                 <span class="text-[10px] text-gray-400">(156)</span>
                             </div>
-                            <span class="font-bold text-sm text-brand-950">Rs. 3,900</span>
+                            <span class="font-bold text-sm text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="mt-10 text-center reveal">
-                    <button class="bg-white border text-brand-950 font-bold uppercase tracking-wider px-10 py-3 hover:bg-gray-50 transition-colors">Load More</button>
+                    <a href="shop.html" class="inline-block bg-white border border-brand-950 text-brand-950 font-bold uppercase tracking-wider px-10 py-3 hover:bg-brand-950 hover:text-white transition-all">View All Products</a>
                 </div>
             </div>
         </section>
@@ -678,6 +678,63 @@
         </div>
     </footer>
 
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4">
+        <div id="quick-view-overlay" class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity opacity-0"></div>
+        <div class="bg-white w-full max-w-4xl relative z-10 rounded-lg overflow-hidden shadow-2xl transform scale-95 opacity-0 transition-all duration-300 flex flex-col md:flex-row max-h-[90vh]">
+            <button id="close-quick-view" class="absolute top-4 right-4 text-brand-950 text-2xl hover:text-red-500 z-20">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="md:w-1/2 bg-gray-50 flex items-center justify-center p-8">
+                <img id="qv-image" src="" alt="Product" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="md:w-1/2 p-8 overflow-y-auto">
+                <div class="space-y-6">
+                    <div>
+                        <span id="qv-category" class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">T-Shirts</span>
+                        <h2 id="qv-title" class="text-3xl font-extrabold uppercase tracking-tighter text-brand-950 mt-2">Product Title</h2>
+                        <p id="qv-price" class="text-2xl font-bold text-brand-950 mt-2">Rs. 0.00</p>
+                    </div>
+                    
+                    <p id="qv-description" class="text-gray-500 text-sm leading-relaxed">
+                        Premium quality streetwear designed for comfort and style. Each piece is crafted with attention to detail and high-grade materials.
+                    </p>
+
+                    <!-- Color Selection -->
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider mb-3">Color: <span id="qv-selected-color" class="text-gray-400 font-medium">Select Color</span></h4>
+                        <div id="qv-colors" class="flex gap-3">
+                            <!-- Colors injected here -->
+                        </div>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider mb-3">Size: <span id="qv-selected-size" class="text-gray-400 font-medium">Select Size</span></h4>
+                        <div id="qv-sizes" class="flex gap-3">
+                            <!-- Sizes injected here -->
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="flex items-center border border-gray-200 rounded">
+                            <button onclick="updateQVQty(-1)" class="w-10 h-10 flex items-center justify-center hover:bg-gray-50">-</button>
+                            <span id="qv-qty" class="w-12 text-center font-bold">1</span>
+                            <button onclick="updateQVQty(1)" class="w-10 h-10 flex items-center justify-center hover:bg-gray-50">+</button>
+                        </div>
+                        <button id="qv-add-btn" class="flex-1 bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
+                            Add to Bag
+                        </button>
+                    </div>
+                    
+                    <button id="qv-buy-btn" class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors flex items-center justify-center gap-1">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Buy via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Cart Drawer -->
     <div id="cart-drawer" class="fixed inset-y-0 right-0 z-[100] w-[90%] max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
         <div class="px-6 py-5 border-b border-gray-100 flex justify-between items-center bg-gray-50">
@@ -709,10 +766,10 @@
             </div>
             <p class="text-[10px] text-gray-400 font-medium">Shipping & taxes calculated at checkout.</p>
             <div class="space-y-3 pt-2">
-                <button class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
+                <button onclick="checkoutWhatsApp()" class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
                     Checkout Now <i class="fa-solid fa-arrow-right text-sm"></i>
                 </button>
-                <button class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">View Bag Details</button>
+                <button onclick="document.getElementById('close-cart-btn').click()" class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">Continue Shopping</button>
             </div>
         </div>
     </div>

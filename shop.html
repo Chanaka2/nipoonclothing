@@ -333,277 +333,202 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Product 1 -->
+                    <!-- Product 1: Two-Ton Signature -->
                     <div class="group reveal cursor-pointer">
-                        <div
+                        <div onclick="openQuickView('twoton-1')"
                             class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
-                            <img src="images/tshirt-model.png" alt="Raksha Mask T-Shirt (Model)"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <img src="images/two ton t-shirt (1).png" alt="Two-Ton Signature"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
                             <div
                                 class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
                             </div>
                             <div
                                 class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('shop-p1', 'DTF T-Shirt', 'Rs. 1999.00')"
+                                <button onclick="openQuickView('twoton-1')"
                                     class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
                                 </button>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900 leading-tight">DTF T-Shirt</h3>
-                                <p class="text-brand-400 text-sm mt-1">Midnight Black</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950 whitespace-nowrap ml-4">Rs. 1999.00</span>
-                        </div>
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-shop-p1" class="sr-only">Size</label>
-                                <select id="size-shop-p1" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="S">Size: S</option>
-                                    <option value="M" selected>Size: M</option>
-                                    <option value="L">Size: L</option>
-                                    <option value="XL">Size: XL</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-shop-p1" class="sr-only">Color</label>
-                                <select id="color-shop-p1" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Midnight Black" selected>Black</option>
-                                    <option value="White">White</option>
-                                </select>
-                            </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Ton Signature Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
 
-                    <!-- Product 2 -->
+                    <!-- Product 2: Two-Ton Urban -->
                     <div class="group reveal cursor-pointer" style="transition-delay: 100ms;">
-                        <div
+                        <div onclick="openQuickView('twoton-2')"
                             class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
-                            <img src="images/tshirt-flat.jpg" alt="Raksha Mask T-Shirt (Flat)"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
-                            </div>
+                            <img src="images/two ton t-shirt (2).png" alt="Two-Ton Urban"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
                             <div class="absolute top-4 left-4"><span
-                                    class="bg-brand-950 text-white text-xs font-bold px-2 py-1 uppercase tracking-wider">New
-                                    Drop</span></div>
+                                    class="bg-brand-950 text-white text-xs font-bold px-2 py-1 uppercase tracking-wider">New</span></div>
+                            <div
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                            </div>
                             <div
                                 class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('shop-p2', 'DTF T-Shirt (Flat)', 'Rs. 1999.00')"
+                                <button onclick="openQuickView('twoton-2')"
                                     class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
                                 </button>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900 leading-tight">DTF T-Shirt</h3>
-                                <p class="text-brand-400 text-sm mt-1">Midnight Black</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950 whitespace-nowrap ml-4">Rs. 1999.00</span>
-                        </div>
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-shop-p2" class="sr-only">Size</label>
-                                <select id="size-shop-p2" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="S">Size: S</option>
-                                    <option value="M" selected>Size: M</option>
-                                    <option value="L">Size: L</option>
-                                    <option value="XL">Size: XL</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-shop-p2" class="sr-only">Color</label>
-                                <select id="color-shop-p2" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Midnight Black" selected>Black</option>
-                                    <option value="White">White</option>
-                                </select>
-                            </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Ton Urban Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
 
-                    <!-- Product Placeholder 3 -->
+                    <!-- Product 3: Two-Ton Essential -->
                     <div class="group reveal cursor-pointer" style="transition-delay: 200ms;">
-                        <div
-                            class="relative bg-gray-200 aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center">
-                            <i
-                                class="fa-solid fa-shirt text-6xl text-gray-400 opacity-50 transition-transform duration-700 group-hover:scale-110 group-hover:text-brand-950"></i>
+                        <div onclick="openQuickView('twoton-3')"
+                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
+                            <img src="images/two ton t-shirt (3).png" alt="Two-Ton Essential"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
                             <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300">
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
                             </div>
                             <div
                                 class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('shop-p3', 'Oversized Graphic Tee', 'Rs. 4,500')"
+                                <button onclick="openQuickView('twoton-3')"
                                     class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
                                 </button>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900 leading-tight">Oversized Graphic Tee</h3>
-                                <p class="text-brand-400 text-sm mt-1">Vintage Wash</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950 whitespace-nowrap ml-4">Rs. 4,500</span>
-                        </div>
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-shop-p3" class="sr-only">Size</label>
-                                <select id="size-shop-p3" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="S">Size: S</option>
-                                    <option value="M" >Size: M</option>
-                                    <option value="L" selected>Size: L</option>
-                                    <option value="XL">Size: XL</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-shop-p3" class="sr-only">Color</label>
-                                <select id="color-shop-p3" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Vintage Wash" selected>Vintage</option>
-                                    <option value="Ash Grey">Ash Grey</option>
-                                </select>
-                            </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Tone Essential Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
 
-                    <!-- Product Placeholder 4 -->
-                    <div class="group reveal cursor-pointer">
-                        <div
-                            class="relative bg-gray-200 aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center">
-                            <i
-                                class="fa-solid fa-tags text-6xl text-gray-400 opacity-50 transition-transform duration-700 group-hover:scale-110 group-hover:text-brand-950"></i>
+                    <!-- Product 4: Two-Ton Midnight -->
+                    <div class="group reveal cursor-pointer" style="transition-delay: 300ms;">
+                        <div onclick="openQuickView('twoton-4')"
+                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
+                            <img src="images/two ton t-shirt (4).png" alt="Two-Ton Midnight"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
                             <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300">
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
                             </div>
                             <div
                                 class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('shop-p4', 'Utility Cargo Pants', 'Rs. 9,000')"
+                                <button onclick="openQuickView('twoton-4')"
                                     class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
                                 </button>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900 leading-tight">Utility Cargo Pants</h3>
-                                <p class="text-brand-400 text-sm mt-1">Olive Green</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950 whitespace-nowrap ml-4">Rs. 9,000</span>
-                        </div>
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-shop-p4" class="sr-only">Size</label>
-                                <select id="size-shop-p4" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="30">Waist: 30</option>
-                                    <option value="32" selected>Waist: 32</option>
-                                    <option value="34">Waist: 34</option>
-                                    <option value="36">Waist: 36</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-shop-p4" class="sr-only">Color</label>
-                                <select id="color-shop-p4" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Olive Green" selected>Olive</option>
-                                    <option value="Black">Black</option>
-                                </select>
-                            </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Tone Midnight Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
 
-                    <!-- Product Placeholder 5 -->
-                    <div class="group reveal cursor-pointer" style="transition-delay: 100ms;">
-                        <div
-                            class="relative bg-gray-200 aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center">
-                            <i
-                                class="fa-solid fa-hat-cowboy text-6xl text-gray-400 opacity-50 transition-transform duration-700 group-hover:scale-110 group-hover:text-brand-950"></i>
+                    <!-- Product 5: Two-Ton Slate -->
+                    <div class="group reveal cursor-pointer" style="transition-delay: 400ms;">
+                        <div onclick="openQuickView('twoton-5')"
+                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
+                            <img src="images/two ton t-shirt (5).png" alt="Two-Ton Slate"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
                             <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300">
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
                             </div>
                             <div
                                 class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('shop-p5', 'Signature Logo Beanie', 'Rs. 2,500')"
+                                <button onclick="openQuickView('twoton-5')"
                                     class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
                                 </button>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900 leading-tight">Signature Logo Beanie</h3>
-                                <p class="text-brand-400 text-sm mt-1">Midnight Black</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950 whitespace-nowrap ml-4">Rs. 2,500</span>
-                        </div>
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-shop-p5" class="sr-only">Size</label>
-                                <select id="size-shop-p5" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="One Size" selected>One Size</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-shop-p5" class="sr-only">Color</label>
-                                <select id="color-shop-p5" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Midnight Black" selected>Black</option>
-                                    <option value="Grey">Grey</option>
-                                </select>
-                            </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Tone Slate Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
 
-                    <!-- Product Placeholder 6 -->
-                    <div class="group reveal cursor-pointer" style="transition-delay: 200ms;">
-                        <div
-                            class="relative bg-gray-200 aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center">
-                            <i
-                                class="fa-solid fa-vest text-6xl text-gray-400 opacity-50 transition-transform duration-700 group-hover:scale-110 group-hover:text-brand-950"></i>
+                    <!-- Product 6: Two-Ton Forest -->
+                    <div class="group reveal cursor-pointer" style="transition-delay: 500ms;">
+                        <div onclick="openQuickView('twoton-6')"
+                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
+                            <img src="images/two ton t-shirt (6).png" alt="Two-Ton Forest"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
                             <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300">
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
                             </div>
                             <div
                                 class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                <button onclick="buyNow('shop-p6', 'Tech-Fleece Zip Up', 'Rs. 10,500')"
+                                <button onclick="openQuickView('twoton-6')"
                                     class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Buy Now
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
                                 </button>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-brand-900 leading-tight">Tech-Fleece Zip Up</h3>
-                                <p class="text-brand-400 text-sm mt-1">Light Grey</p>
-                            </div>
-                            <span class="font-bold text-lg text-brand-950 whitespace-nowrap ml-4">Rs. 10,500</span>
-                        </div>
-                        <!-- Size and Color Selectors -->
-                        <div class="mt-3 grid grid-cols-2 gap-2">
-                            <div>
-                                <label for="size-shop-p6" class="sr-only">Size</label>
-                                <select id="size-shop-p6" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="S">Size: S</option>
-                                    <option value="M">Size: M</option>
-                                    <option value="L" selected>Size: L</option>
-                                    <option value="XL">Size: XL</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="color-shop-p6" class="sr-only">Color</label>
-                                <select id="color-shop-p6" class="w-full text-xs border border-gray-200 p-2 focus:outline-none focus:border-brand-950">
-                                    <option value="Light Grey" selected>Grey</option>
-                                    <option value="Black">Black</option>
-                                    <option value="Navy">Navy</option>
-                                </select>
-                            </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Tone Forest Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
                         </div>
                     </div>
+
+                    <!-- Product 7: Two-Ton Crimson -->
+                    <div class="group reveal cursor-pointer" style="transition-delay: 600ms;">
+                        <div onclick="openQuickView('twoton-7')"
+                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
+                            <img src="images/two ton t-shirt (7).png" alt="Two-Ton Crimson"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                            </div>
+                            <div
+                                class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                <button onclick="openQuickView('twoton-7')"
+                                    class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
+                                </button>
+                            </div>
+                        </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Tone Crimson Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Product 8: Two-Ton Royal -->
+                    <div class="group reveal cursor-pointer" style="transition-delay: 700ms;">
+                        <div onclick="openQuickView('twoton-8')"
+                            class="relative bg-white aspect-[4/5] overflow-hidden mb-4 rounded-sm flex items-center justify-center border border-gray-100">
+                            <img src="images/two ton t-shirt (8).png" alt="Two-Ton Royal"
+                                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                            </div>
+                            <div
+                                class="absolute bottom-4 left-0 right-0 px-4 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                <button onclick="openQuickView('twoton-8')"
+                                    class="w-full bg-brand-950 text-white py-3 uppercase tracking-wider font-bold text-sm hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-plus text-xs"></i> Select Options
+                                </button>
+                            </div>
+                        </div>
+                        <div class="px-3 pb-4">
+                            <h3 class="font-bold text-brand-900 mb-1">Two-Tone Royal Tee</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">T-Shirts</p>
+                            <span class="font-bold text-brand-950">Rs. 999.00</span>
+                        </div>
+                    </div>
+
                 </div>
+
 
                 <!-- Pagination -->
                 <div class="mt-16 flex justify-center space-x-2 reveal">
@@ -688,6 +613,48 @@
         </div>
     </footer>
 
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4">
+        <div id="quick-view-overlay" class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity opacity-0"></div>
+        <div class="bg-white w-full max-w-4xl relative z-10 rounded-lg overflow-hidden shadow-2xl transform scale-95 opacity-0 transition-all duration-300 flex flex-col md:flex-row max-h-[90vh]">
+            <button id="close-quick-view" class="absolute top-4 right-4 text-brand-950 text-2xl hover:text-red-500 z-20">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="md:w-1/2 bg-gray-50 flex items-center justify-center p-8">
+                <img id="qv-image" src="" alt="Product" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="md:w-1/2 p-8 overflow-y-auto">
+                <div class="space-y-6">
+                    <div>
+                        <span id="qv-category" class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Collection</span>
+                        <h2 id="qv-title" class="text-3xl font-extrabold uppercase tracking-tighter text-brand-950 mt-2">Product Title</h2>
+                        <p id="qv-price" class="text-2xl font-bold text-brand-950 mt-2">Rs. 0.00</p>
+                    </div>
+                    <p id="qv-description" class="text-gray-500 text-sm leading-relaxed">Premium quality streetwear designed for comfort and style.</p>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider mb-3">Color: <span id="qv-selected-color" class="text-gray-400 font-medium">Select Color</span></h4>
+                        <div id="qv-colors" class="flex gap-3"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider mb-3">Size: <span id="qv-selected-size" class="text-gray-400 font-medium">Select Size</span></h4>
+                        <div id="qv-sizes" class="flex gap-3"></div>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="flex items-center border border-gray-200 rounded">
+                            <button onclick="updateQVQty(-1)" class="w-10 h-10 flex items-center justify-center hover:bg-gray-50">-</button>
+                            <span id="qv-qty" class="w-12 text-center font-bold">1</span>
+                            <button onclick="updateQVQty(1)" class="w-10 h-10 flex items-center justify-center hover:bg-gray-50">+</button>
+                        </div>
+                        <button id="qv-add-btn" class="flex-1 bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">Add to Bag</button>
+                    </div>
+                    <button id="qv-buy-btn" class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors flex items-center justify-center gap-1">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Buy via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Cart Drawer -->
     <div id="cart-drawer" class="fixed inset-y-0 right-0 z-[100] w-[90%] max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
         <div class="px-6 py-5 border-b border-gray-100 flex justify-between items-center bg-gray-50">
@@ -719,10 +686,10 @@
             </div>
             <p class="text-[10px] text-gray-400 font-medium">Shipping & taxes calculated at checkout.</p>
             <div class="space-y-3 pt-2">
-                <button class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
+                <button onclick="checkoutWhatsApp()" class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
                     Checkout Now <i class="fa-solid fa-arrow-right text-sm"></i>
                 </button>
-                <button class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">View Bag Details</button>
+                <button onclick="document.getElementById('close-cart-btn').click()" class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">Continue Shopping</button>
             </div>
         </div>
     </div>
