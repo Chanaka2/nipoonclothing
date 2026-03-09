@@ -112,7 +112,7 @@
                     <button class="flex flex-col items-center text-brand-950 hover:text-brand-500 transition relative group" id="cart-drawer-btn">
                         <div class="relative">
                             <i class="fa-solid fa-bag-shopping text-xl group-hover:-translate-y-0.5 transition-transform"></i>
-                            <span class="absolute -top-1.5 -right-2 bg-red-600 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
+                            <span class="absolute -top-1.5 -right-2 bg-red-600 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center hidden">0</span>
                         </div>
                         <span class="text-[10px] font-medium uppercase mt-0.5 hidden lg:block">Cart</span>
                     </button>
@@ -351,7 +351,7 @@
                                 <div class="bg-red-500 h-1.5 rounded-full" style="width: 85%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">85 sold</p>
-                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                     
@@ -371,7 +371,7 @@
                                 <div class="bg-orange-400 h-1.5 rounded-full" style="width: 45%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">45 sold</p>
-                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                     
@@ -391,7 +391,7 @@
                                 <div class="bg-red-500 h-1.5 rounded-full" style="width: 92%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">92 sold</p>
-                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                     
@@ -411,7 +411,7 @@
                                 <div class="bg-green-500 h-1.5 rounded-full" style="width: 15%"></div>
                             </div>
                             <p class="text-[10px] text-gray-500 mb-3">15 sold</p>
-                            <button class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
+                            <button onclick="addToCart('fs-p1', 'Premium Oversized Tee', 'Rs. 1,800', 'images/tshirt-flat.jpg')" class="w-full bg-brand-950 text-white text-xs font-bold py-2 rounded-sm hover:bg-brand-800 transition">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -437,9 +437,12 @@
                         </div>
                         <div class="relative bg-gray-50 aspect-[3/4] overflow-hidden flex items-center justify-center p-2 mb-3">
                             <img src="images/tshirt-flat.jpg" alt="Product" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
-                            <!-- Quick View Button -->
-                            <div class="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="w-full bg-white/90 text-brand-950 text-xs font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                            <!-- Quick View & Add Button -->
+                            <div class="absolute bottom-2 left-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="flex-1 bg-white/95 text-brand-950 text-[10px] font-bold py-2 rounded-sm hover:bg-white shadow">Quick View</button>
+                                <button onclick="addToCart('reco-1', 'Graphic Print Oversized Tee', 'Rs. 2,200', 'images/tshirt-flat.jpg')" class="bg-brand-950 text-white px-3 py-2 rounded-sm hover:bg-brand-800 shadow">
+                                    <i class="fa-solid fa-plus text-[10px]"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="px-3">
@@ -675,7 +678,48 @@
         </div>
     </footer>
 
+    <!-- Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 z-[100] w-[90%] max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
+        <div class="px-6 py-5 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping text-brand-950 text-xl"></i>
+                <h2 class="text-xl font-extrabold uppercase tracking-tighter">Your Bag</h2>
+                <span id="cart-count-badge-drawer" class="bg-brand-950 text-white text-[10px] font-bold px-2 py-0.5 rounded-full hidden">0</span>
+            </div>
+            <button id="close-cart-btn" class="text-brand-950 text-2xl hover:text-red-500 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="cart-items-container" class="flex-1 overflow-y-auto px-6 py-6 space-y-6">
+            <!-- Empty Cart State -->
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center text-gray-300">
+                    <i class="fa-solid fa-bag-shopping text-4xl"></i>
+                </div>
+                <p class="text-gray-500 font-medium">Your shopping bag is empty.</p>
+                <a href="shop.html" class="inline-block bg-brand-950 text-white font-bold uppercase tracking-wider px-8 py-3 hover:bg-brand-800 transition-colors">Start Shopping</a>
+            </div>
+        </div>
+
+        <div id="cart-footer" class="px-6 py-6 border-t border-gray-100 bg-gray-50 space-y-4 hidden">
+            <div class="flex justify-between items-center">
+                <span class="text-gray-500 font-medium uppercase tracking-wider text-sm">Subtotal</span>
+                <span id="cart-subtotal" class="text-xl font-bold text-brand-950">Rs. 0.00</span>
+            </div>
+            <p class="text-[10px] text-gray-400 font-medium">Shipping & taxes calculated at checkout.</p>
+            <div class="space-y-3 pt-2">
+                <button class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
+                    Checkout Now <i class="fa-solid fa-arrow-right text-sm"></i>
+                </button>
+                <button class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">View Bag Details</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-[90] hidden opacity-0 transition-opacity duration-300"></div>
+
     <script src="js/main.js"></script>
 </body>
-
 </html>

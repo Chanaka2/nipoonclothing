@@ -300,7 +300,42 @@
         </div>
     </footer>
 
+    <!-- Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 z-[100] w-[90%] max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
+        <div class="px-6 py-5 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping text-brand-950 text-xl"></i>
+                <h2 class="text-xl font-extrabold uppercase tracking-tighter">Your Bag</h2>
+                <span id="cart-count-badge-drawer" class="bg-brand-950 text-white text-[10px] font-bold px-2 py-0.5 rounded-full hidden">0</span>
+            </div>
+            <button id="close-cart-btn" class="text-brand-950 text-2xl hover:text-red-500 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div id="cart-items-container" class="flex-1 overflow-y-auto px-6 py-6 space-y-6">
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center text-gray-300">
+                    <i class="fa-solid fa-bag-shopping text-4xl"></i>
+                </div>
+                <p class="text-gray-500 font-medium">Your shopping bag is empty.</p>
+                <a href="shop.html" class="inline-block bg-brand-950 text-white font-bold uppercase tracking-wider px-8 py-3 hover:bg-brand-800 transition-colors">Start Shopping</a>
+            </div>
+        </div>
+        <div id="cart-footer" class="px-6 py-6 border-t border-gray-100 bg-gray-50 space-y-4 hidden">
+            <div class="flex justify-between items-center">
+                <span class="text-gray-500 font-medium uppercase tracking-wider text-sm">Subtotal</span>
+                <span id="cart-subtotal" class="text-xl font-bold text-brand-950">Rs. 0.00</span>
+            </div>
+            <p class="text-[10px] text-gray-400 font-medium">Shipping & taxes calculated at checkout.</p>
+            <div class="space-y-3 pt-2">
+                <button class="w-full bg-brand-950 text-white font-bold uppercase tracking-wider py-4 hover:bg-brand-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-950/10">
+                    Checkout Now <i class="fa-solid fa-arrow-right text-sm"></i>
+                </button>
+                <button class="w-full border-2 border-brand-950 text-brand-950 font-bold uppercase tracking-wider py-3 hover:bg-brand-50 transition-colors">View Bag Details</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-[90] hidden opacity-0 transition-opacity duration-300"></div>
     <script src="js/main.js"></script>
 </body>
-
 </html>
